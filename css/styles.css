@@ -5,15 +5,16 @@
 }
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
+
 body {
   color: #434455;
   font-family: "Roboto", sans-serif;
   background-color: #fff;
 }
-.visually-hidden,
-.section-title-hidden {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -244,6 +245,10 @@ p {
   display: flex;
   gap: 24px;
 }
+.team-list > li {
+  width: calc((100% - 72px) / 4);
+}
+
 .text-team {
   display: flex;
   flex-direction: column;
@@ -265,9 +270,6 @@ p {
 .container-footer {
   padding-top: 0px;
   padding-bottom: 0px;
-}
-.p-footer {
-  margin-top: 16px;
 }
 .container {
   max-width: 1158px; /* ширина из макета */
@@ -298,7 +300,7 @@ p {
 }
 .p-footer {
   max-width: 264px;
-  margin-top: 16px;
+  margin-top: 0;
 }
 .list-item-sec-three {
   border-radius: 0 0 4px 4px;
