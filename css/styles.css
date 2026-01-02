@@ -125,11 +125,7 @@ p {
 }
 .section-one {
   background-color: #2e2f42;
-  min-height: 600px;
-  display: flex; /* ⬅ ВКЛЮЧАЕМ FLEX */
-  flex-direction: column; /* элементы сверху вниз */
-  justify-content: center; /* ⬅ центр по ВЕРТИКАЛИ */
-  align-items: center; /* ⬅ центр по ГОРИЗОНТАЛИ */
+  padding: 188px 0;
 }
 .header-one {
   font-weight: 700;
@@ -150,6 +146,9 @@ p {
   cursor: pointer;
   padding: 16px 32px;
   border-radius: 4px;
+  border: none;
+  /* часто ще потрібно */
+  outline: none;
 }
 
 .button-section-one:hover,
@@ -235,6 +234,9 @@ p {
   display: flex;
   gap: 24px;
 }
+.list-section-two > li {
+  width: calc((100% - 72px) / 4);
+}
 .sec-two {
   margin-bottom: 8px;
 }
@@ -249,10 +251,9 @@ p {
   gap: 8px;
 }
 .cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 24px; /* между карточками в ряду */
-  row-gap: 48px; /* между рядами */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px; /* вертикальний 48, горизонтальний 24 (часто так) */
 }
 .text-portfolio {
   padding: 32px 16px 32px 16px;
@@ -262,8 +263,8 @@ p {
 }
 
 .container-footer {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 .p-footer {
   margin-top: 16px;
@@ -298,4 +299,11 @@ p {
 .p-footer {
   max-width: 264px;
   margin-top: 16px;
+}
+.list-item-sec-three {
+  border-radius: 0 0 4px 4px;
+  overflow: hidden; /* щоб фото/фон не вилізали за радіус */
+}
+.portfolio-card {
+  width: calc((100% - 48px) / 3); /* 2 gaps по 24 = 48 */
 }
